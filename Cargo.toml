@@ -1,0 +1,19 @@
+[package]
+name = "luckychacha-sqlx-pg-tester"
+version = "0.1.0"
+authors = ["Luckychacha"]
+edition = "2021"
+license = "MIT"
+documentation = "https://docs.rs/luckychacha-sqlx-pg-tester"
+repository = "https://github.com/luckychacha/luckychacha-sqlx-pg-tester"
+homepage = "https://github.com/luckychacha/luckychacha-sqlx-pg-tester"
+description = "A simple tool to test postgres based on tokio runtime."
+
+readme = "README.md"
+categories = ["development-tools"]
+keywords = ["postgres"]
+
+[dependencies]
+sqlx = { version = "0.6.2", features = ["runtime-tokio-rustls", "postgres"] }
+tokio = { version = "1.25.0", features = ["macros", "rt", "rt-multi-thread"] }
+uuid = { version = "1.3.0", features = ["v4"] }
