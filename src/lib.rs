@@ -10,7 +10,7 @@ pub struct TestDb {
     pub user: String,
     pub password: String,
     pub host: String,
-    pub port: i32,
+    pub port: u16,
 }
 
 impl TestDb {
@@ -18,7 +18,7 @@ impl TestDb {
         user: impl Into<String>,
         password: impl Into<String>,
         host: impl Into<String>,
-        port: i32,
+        port: u16,
         migration_path: impl Into<String>,
     ) -> Self {
         let uuid = Uuid::new_v4();
